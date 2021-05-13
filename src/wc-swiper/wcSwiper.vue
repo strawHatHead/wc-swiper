@@ -401,7 +401,11 @@
 				this.swiper.style.transitionDuration = ms + 'ms';
 			},
 			left () {
-				return this.swiper.getBoundingClientRect().left;
+				let swiperClient = this.swiper.getBoundingClientRect();
+				let left = Math.abs(swiperClient.left);
+				let number = Math.ceil(left / this.swiperWidth);
+				let length = number * this.swiperWidth;
+				return length;
 			}
 		}
 	}
