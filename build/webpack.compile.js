@@ -7,7 +7,7 @@ const externals = {
     'vue': 'vue'
 }
 
-const packageJson = path.resolve(process.cwd(), 'static') + '/package.json';
+const packageJson = path.resolve(process.cwd(), '') + '/package.json';
 const name = require(packageJson).name;
 
 const config = {
@@ -55,7 +55,7 @@ const config = {
                         use: 'css-loader?minimize!postcss-loader!less-loader',
                     })
                     // css:'css-loader?minimize',
-                    
+
                     // less: 'css-loader?minimize!postcss-loader!less-loader'
 
 
@@ -81,7 +81,7 @@ const config = {
         new ExtractTextPlugin('style.css'),
         new webpack.LoaderOptionsPlugin({
             minimize: true
-        })   
+        })
     ]
 };
 module.exports = config;

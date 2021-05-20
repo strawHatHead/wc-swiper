@@ -1,11 +1,11 @@
 {
-  "name": "wc-publish-env",
-  "version": "1.0.0",
+  "name": "wc-swiper-screen",
+  "version": "1.0.2",
   "description": "打包环境",
-  "main": "index.js",
+  "main": "./src/wc-swiper/index.js",
   "scripts": {
     "dev": "node build/server.js",
-    "compile": "node build/compile.js && npm publish ./wc-swiper"
+    "compile": "node build/compile.js && npm publish ./wc-swiper-screen"
   },
   "author": "linfeng123",
   "license": "MIT",

@@ -6,7 +6,8 @@ const path = require('path');
 const chalk = require('chalk');
 const fs = require('fs');
 const semver = require('semver');
-const src = path.resolve(process.cwd(), 'static');
+const src = path.resolve(process.cwd(), '');
+console.log('src', src);
 const packageJson = src + '/package.json';
 const name = require(packageJson).name;
 
@@ -73,6 +74,6 @@ function modifyVersion() {
         }
         // 重新修改 版本号
         obj.version = major + '.' + minor + '.' + patch;
-        fs.writeFile(packageJson, JSON.stringify(obj, null, 4)) 
+        fs.writeFile(packageJson, JSON.stringify(obj, null, 4))
     })
 }
